@@ -3,3 +3,6 @@ Flask==1.1.2
 gunicorn
 dnspython
 pandas
+python-decouple
+flask_pymongo
+authlib.integrations.flask_client
