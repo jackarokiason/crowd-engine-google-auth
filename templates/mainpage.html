@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+    .list-group-item{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+}
+
+.list-group-item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.img{
+    float:right;
+}
+
+    </style>
+
+</head>
+<body>
+{%extends 'base.html' %}
+
+
+{%block head%}
+
+<div class = "container">
+    <div class="card" style="width: 100%;">
+        <div class="card-header">
+        ML Glossary
+        </div>
+        <ul class="list-group list-group-flush">
+
+        {%for i in  range(movie_list|length)%}
+        <li class="list-group-item"> <a href='/crowdengine/{{movie_list[i]}}' style="text-decoration: none; color:black">{{movie_list[i]}}</a></li>
+        {%endfor%}
+
+
+        </ul>
+    </div>
+</div>
+
+{%endblock%}
+</body>

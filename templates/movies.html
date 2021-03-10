@@ -1,0 +1,50 @@
+ {%extends 'base.html'%}
+
+ {% block head%}
+
+ 
+ 
+    <div class = "container "   >
+         <a class="btn rounded-circle "  style="float: left; margin-top:0% ; margin-left: -4%;" href="/crowdengine/pre?page={{name}}"> <img src={{url_for('static',filename="/icons/caret-left-fill.svg")}} width = 40px height = 40px></a>
+        <a class="btn rounded-circle" style="float: right; margin-top:0%; margin-right: -4%;" href= "/crowdengine/next?page={{name}}" > <img src={{url_for('static',filename="/icons/caret-right-fill.svg")}} width=40px height = 40px></a>
+          <br><br><br>
+  
+        <form action='/crowdengine/write' method="POST" >
+            <center><legend>{{name}}</legend></center>
+            </br>
+
+           <input type="hidden" name="topic" value="{{name}}">       
+
+            <div class="form-group ">
+               <label for="Addcontent">Content</label>
+               <textarea id="Addcontent" class="form-control"  name="Addcontent" placeholder="Enter the Content" rows="20" cols="50">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="Tags">Tags</label>
+              <input type="text" class="form-control" id="Tags"  name="Tags" placeholder="Enter the Tags">
+            </div>
+
+            <div class="form-group">
+                <label for="Levels">Levels</label>
+                <input type="text" class="form-control" id="Levels"  name= "Levels" placeholder="Enter the Levels">
+            </div>
+
+           
+            </br>
+            </br>
+            <center><button type="submit" class="btn btn-success">Submit</button>
+       
+            </center>
+              
+          </form>
+
+   
+  
+       
+      
+    </div>
+
+    
+    {%endblock%}
