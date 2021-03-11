@@ -6,3 +6,4 @@ pandas
 python-decouple
 OAuth
 AuthClient
+flask_pymongo
