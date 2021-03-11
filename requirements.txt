@@ -4,5 +4,5 @@ gunicorn
 dnspython
 pandas
 python-decouple
-flask_pymongo
-authlib.integrations.flask_client
+OAuth
+AuthClient
