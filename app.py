@@ -1,14 +1,14 @@
 from flask import Flask,render_template,request,url_for,redirect
 import data
 from authlib.integrations.flask_client import OAuth
-
+from decouple import config
 app = Flask(__name__ )
 
 oauth = OAuth(app)
 
 app.config['SECRET_KEY'] = "THIS SHOULD BE SECRET"
-app.config['GOOGLE_CLIENT_ID'] = "293203167323-halo1ohjl1aaefome9dbi8jlqvoovgkp.apps.googleusercontent.com"
-app.config['GOOGLE_CLIENT_SECRET'] = "p4oGl-vFB4ZjWzukY3UrlrBo"
+app.config["GOOGLE_CLIENT_ID"]=config("GOOGLE_CLIENT_ID")
+app.config["GOOGLE_CLIENT_SECRET"]=config("GOOGLE_CLIENT_SECRET")
 # app.config['GITHUB_CLIENT_ID'] = "<your github client id>"
 # app.config['GITHUB_CLIENT_SECRET'] = "<your github client secret>"
 
